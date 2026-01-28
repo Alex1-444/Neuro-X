@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+    <html lang="Es">
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>NeuroX-inicia sesion</title>
+
+            <link rel="stylesheet" href="./reset.css">
+            <link rel="stylesheet" href="./iniciar-sesion.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+            <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+            <script src="https://unpkg.com/lucide@latest"></script>
+            <script src="./forms.js" defer></script>
+        </head>
+        
+        <body>
+            <header>
+                <div class="logo">
+                    <svg class="logo-brain" viewBox="0 0 120 120" fill="none">
+                        <defs>
+                            <linearGradient id="brainGradient" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#38bdf8"/>
+                                <stop offset="100%" stop-color="#a855f7"/>
+                            </linearGradient>
+                            
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge>
+                                    <feMergeNode in="blur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            
+                        </defs>
+
+                        <!-- hemisferio izquierdo -->
+                        <path
+                        d="M35 30
+                        C20 25 15 45 25 50
+                        C15 60 25 80 45 75
+                        C40 85 55 90 60 80
+                        V30
+                        C55 20 40 20 35 30Z"
+                        stroke="url(#brainGradient)"
+                        stroke-width="3"
+                        fill="none"
+                        filter="url(#glow)"
+                        />
+                        
+                        <!-- hemisferio derecho -->
+                        <path
+                        d="M85 30
+                        C100 25 105 45 95 50
+                        C105 60 95 80 75 75
+                        C80 85 65 90 60 80
+                        V30
+                        C65 20 80 20 85 30Z"
+                        stroke="url(#brainGradient)"
+                        stroke-width="3"
+                        fill="none"
+                        filter="url(#glow)"
+                        />
+                        
+                        <!-- surcos internos -->
+                        <path d="M40 40 C30 45 35 60 45 65" stroke="url(#brainGradient)" opacity="0.5"/>
+                        <path d="M40 55 C30 60 40 75 50 70" stroke="url(#brainGradient)" opacity="0.5"/>
+                        
+                        <path d="M80 40 C90 45 85 60 75 65" stroke="url(#brainGradient)" opacity="0.5"/>
+                        <path d="M80 55 C90 60 80 75 70 70" stroke="url(#brainGradient)" opacity="0.5"/>
+                        
+                        <!-- línea central -->
+                        <line x1="60" y1="28" x2="60" y2="85" stroke="url(#brainGradient)" opacity="0.3"/>
+                    </svg>
+                    
+                    <h1 class="logo-text">
+                        Neuro<span>X</span>
+                    </h1>
+                </div>
+            </header>
+            
+            <main>
+                <div class="auth-card" id="authCard">
+                    <form class="form login-form">
+                        <h2 class="text-form">Inicia Sesión</h2>
+                        <p class="text-form-2">Lee, Visualiza, Aprende</p>
+
+                        <div class="input">
+                            <span class="icon-user">
+                                <i data-lucide="mail"></i>
+                            </span>
+                            <input type="email" id="loginEmail" placeholder=" " required />
+                            <label for="loginEmail">Correo:</label>
+                        </div>
+
+                        <div class="input">
+                            <span class="icon-user">
+                                <i data-lucide="lock"></i>
+                            </span>
+                            <input type="password" id="loginPassword" placeholder=" " required/>
+                            <label for="loginPassword">Contraseña:</label>
+
+                            <span class="toggle-password" data-target="loginPassword">
+                                <i data-lucide="eye"></i>
+                            </span>
+                        </div>
+
+                        <div class="terms">
+                            <label>
+                                <input type="checkbox" required />
+                                <span>
+                                    Acepto los
+                                    <a href="#">Términos</a> y la
+                                    <a href="#">Política de privacidad</a>
+                                </span>
+                            </label>
+                        </div>
+ 
+                        <div class="box-button">
+                            <button class="button-entrar">Iniciar Sesión</button></a>
+                        </div>
+
+                        <p class="switch">
+                            ¿No tienes cuenta?
+                            <span id="goRegister">Registrate</span>
+                        </p>
+                    </form>
+
+                    <form class="form register-form">
+                        <h2 class="text-form">Crea tu cuenta NeuroX</h2>
+                        <p class="text-form-2">Unete a NeuroX para descubrir conocimientos avanzados de IA</p>
+
+                        <div class="input">
+                            <span class="icon-user">
+                                <i data-lucide="user"></i>
+                            </span>
+                            <input type="text" id="nombre" placeholder=" " required/>
+                            <label for="nombre">Nombre:</label>
+                        </div>
+
+                        <div class="input">
+                            <span class="icon-user">
+                                <i data-lucide="mail"></i>
+                            </span>
+                            <input type="email" id="registerEmail" placeholder=" " required />
+                            <label for="registerEmail">Correo:</label>
+                        </div>
+
+                        <div class="input">
+                            <span class="icon-user">
+                                <i data-lucide="lock"></i>
+                            </span>
+                            <input type="password" id="registerPassword" placeholder=" " required/>
+                            <label for="registerPassword">Contraseña:</label>
+
+                            <span class="toggle-password" data-target="registerPassword">
+                                <i data-lucide="eye"></i>
+                            </span>
+                        </div>
+
+                        <div class="input">
+                            <span class="icon-user">
+                                <i data-lucide="lock-keyhole"></i>
+                            </span>
+                            <input type="password" id="passwordConfirm" placeholder=" " required/>
+                            <label for="passwordConfirm">Confirmar Contraseña:</label>
+                        </div>
+
+                        <div class="terms">
+                            <label>
+                                <input type="checkbox" required />
+                                <span>
+                                    Acepto los
+                                    <a href="#">Términos</a> y la
+                                    <a href="#">Política de privacidad</a>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="box-button">
+                            <button class="button-entrar">Crear Cuenta</button></a>
+                        </div>
+
+                        <p class="switch">
+                            ¿Ya tienes cuenta?
+                            <span id="goLogin">Inicia Sesión</span>
+                        </p>
+                    </form>
+                </div>
+            </main>
+        </body>
+    </html>

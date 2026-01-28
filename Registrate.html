@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html lang="Es">
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./reseteo.css">
+            <link rel="stylesheet" href="./Registrate.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+            <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+            <title>NeuroX-Registrate</title>
+        </head>
+        
+        <body>
+            <header class="caja-portada">
+                <div class="container-navegation">
+                    <nav>
+                        <a href="./NeuroX.portada.html" class="volver-icono">
+                            <img src="./ICONOS/regresar-icono.png" alt="Inicio">
+                        </a>
+                            <img src="./IMAGENES/NeuroX logo trans.png" class="logo-en-el-menu">
+                        
+                        <a href="#" class="icon-help">
+                            <img src="./ICONOS/help-center.png" alt="Ayuda">
+                            <span>Ayuda</span>
+                        </a>
+                    </nav>
+                </div>
+            </header>
+            
+            <main>
+                <div>
+                    <form id="box-container-register">
+                        <div class="input-register">
+                             <label for="nombre">¿Cual es tu nombre?</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required/>
+                        </div>
+
+                        <div class="input-register">
+                            <input type="text" id="apellido" name="apellido" placeholder="apellido" required/>
+                        </div>
+
+                        <div class="input-register">
+                            <label for="pais">¿Cual es tu pais y estado?</label>
+                            <input type="text" id="pais" name="pais" placeholder="pais" required/>
+                        </div>
+
+                         <div class="input-register">
+                            <input type="text" id="estado" name="estado" placeholder="Estado" required/>
+                        </div>
+                        
+                        <div class="fecha-row">
+                            <div class="input-register">
+                                <label for="Dia">Dia</label>
+                                <input type="number" name="dia" min="1" max="31" placeholder="Dia"/>
+                            </div>
+                                
+                            <div class="input-register">
+                                <label for="Mes">Mes</label>
+                                <input type="number" name="mes" min="1" max="12" placeholder="Mes"/>
+                            </div>
+                            
+                            <div class="input-register">
+                                <label for="Año">Año</label>
+                                <input type="number" name="anio" min="1950" max="2025"placeholder="Año"/>
+                            </div>
+                        </div>
+
+                        <div class="input-register">
+                            <label for="email">Crea tu cuenta</label>
+                            <input type="email" id="email" name="email" placeholder="eje: alex35@ outlook.com " required/>
+                        </div>
+
+                        <div class="input-register">
+                            <input type="password" id="password" name="password" placeholder="Crear contraseña" required/>
+                        </div>
+
+                        <div class="input-register">
+                            <input type="password" id="password2" name="password2" placeholder="Confirmar contraseña" required/>
+                        </div>
+ 
+                        <div class="box-button2">
+                            <button class="button-iniciar">Iniciar</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </body>
+    </html>
