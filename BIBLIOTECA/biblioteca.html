@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang="Es">
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Categorias</title>
+
+            <link rel="stylesheet" href="/reseteo.css">
+            <link rel="stylesheet" href="/BIBLIOTECA/biblioteca.css">
+            <link rel="stylesheet" href="/COMPONENTS/NAV/navMenu.css">
+            <link rel="stylesheet" href="/COMPONENTS/ASIDE/aside.css">
+
+            <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+            <script src="/JAVASCRIPT/lucide.min.js"></script>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+
+            <script src="/COMPONENTS/NAV/navMenu.js" defer></script>
+            <script src="/COMPONENTS/ASIDE/aside.js" defer></script>
+            <script type="module" src="/JAVASCRIPT/appBiblioteca.js"></script>
+        </head>
+
+        <body>
+            <div id="menu-container"></div>
+            
+            <main>
+                <section class="seccion-1-biblioteca">
+                    <aside id="mn--aside" class="leteral--mn"></aside>
+
+                    <section class="section2-biblioteca">
+                        <div class="div-h1">
+                            <h1 class="h1">Tu biblioteca</h1>
+
+                            <div class="div-image">
+                                <img class="image" src="../IMAGENES/jim-kwik.jpg">
+                                <h2 class="h2">
+                                    <a href="#">Alex deyll</a> • <span id="sesiones-count">0 sesiones guardadas</span>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div id="seccion-guardados" class="div-biblioteca">
+                            <h2 class="h2-cards">guardado recientemente</h2>
+
+                            <ul id="id-cards" class="cards"></ul>
+                        </div>
+
+                        <hr />
+
+                        <div id="container-listas" class="div-biblioteca-Listas"></div>
+                    </section>
+                </section>
+            </main>
+        </body>

@@ -6,1053 +6,528 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>NeuroX-Home</title>
 
-            <link rel="stylesheet" href="./reseteo.css">
+            <link rel="stylesheet" href="../reseteo.css">
             <link rel="stylesheet" href="./NeuroX-principal.css">
+            <link rel="stylesheet" href="/COMPONENTS/HEARTANIMATION/heartAnimation.css">
+            <link rel="stylesheet" href="/COMPONENTS/ASIDE/aside.css">
+            <link rel="stylesheet" href="/COMPONENTS/NAV/navMenu.css">
 
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <script src="/JAVASCRIPT/lucide.min.js"></script>
 
-            <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-
-            <script src="https://unpkg.com/lucide@latest"></script>
-            <script src="./principal.js" defer></script>
+            <script src="/COMPONENTS/NAV/navMenu.js" defer></script>
+            <script src="/COMPONENTS/ASIDE/aside.js" defer></script>
+            <script type="module" src="../JAVASCRIPT/home.js"></script>
         </head>
 
         <body>
-            <header class="hero-bgn">
-                <div class="imagen-body"></div>
-                <div id="frase-header"></div>
-
-                <div>                              
-                    <nav class="box-principal">
-                        <div class="nav-left">
-
-                            <div class="container-logo">          
-                                <h1 class="logo-text-principal">
-                                    Neuro<span>X</span>
-                                </h1>          
-                            </div>
-                            
-                            <div class="container-flechas">
-                                <div class="box-flechas">
-                                    <a href="#" data-page="#" class="link-flecha-left">
-                                        <span class="box-icon-left">
-                                            <i data-lucide="chevron-left"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="container-flechas">
-                                <div class="box-flechas">
-                                    <a href="#" class="link-flecha-right">
-                                        <span class="box-icon-right">
-                                            <i data-lucide="chevron-right"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="custom-select">
-                                <div class="selected">Categorías</div>
-                                <ul class="options">
-                                    <li data-value="doc">- documentales</li>
-                                    <li data-value="esp">- Espiritual</li>
-                                    <li data-value="his">- Historia</li>
-                                    <li data-value="ter">- terror</li>
-                                    <li data-value="ast">- astronomia</li>
-                                    <li data-value="cri">- criminologia</li>
-                                    <li data-value="aut">- biografias</li>
-                                </ul>
-                                
-                                <select name="categoria" hidden>
-                                    <option value="doc"></option>
-                                    <option value="esp"></option>
-                                    <option value="his"></option>
-                                    <option value="ter"></option>
-                                    <option value="ast"></option>
-                                    <option value="cri"></option>
-                                    <option value="aut"></option>
-                                </select>
-                            </div>
-                        </div>
-                            
-                        <div class="box-iconos">
-                            <div class="box-icon">
-                                <a href="#" class="box-link">
-                                    <span class="container-span">
-                                        <i data-lucide="home"></i>
-                                    </span>
-                                    <span class="text-nav">inicio</span>
-                                </a>
-                            </div>                                        
-
-                            <div class="box-icon">
-                                <a href="#" class="box-link">
-                                    <span class="container-span">
-                                        <i data-lucide="book-open"></i>
-                                    </span>
-                                    <span class="text-nav">Biblioteca</span>
-                                </a>
-                            </div>
-
-                            <div class="box-icon">
-                                <a href="#" class="box-link">
-                                    <span class="container-span">
-                                        <i data-lucide="sticky-note"></i>
-                                    </span>
-                                    <span class="text-nav">notas</span>
-                                </a>
-                            </div>
-
-                            <div class="box-icon">
-                                <a href="#" class="box-link">
-                                    <span class="container-span">
-                                        <i data-lucide="film"></i>
-                                    </span>
-                                    <span class="text-nav">documentales</span>
-                                </a>
-                            </div>
-                            
-                            <div class="box-icon">
-                                <a href="#" class="box-link">
-                                    <span class="container-span">
-                                        <i data-lucide="brain"></i>
-                                    </span>
-                                    <span class="text-nav">AI-N</span>
-                                </a>
-                            </div>
-                            
-                            <div class="box-icon">
-                                <a href="#" class="box-link">
-                                    <span class="container-span">
-                                        <i data-lucide="search"></i>
-                                    </span>
-                                    <span class="text-nav">Buscar</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="box-icons-notifi">
-                            <a href="#" class="box-icons-url">
-                                <span class="span-notifi">
-                                    <i data-lucide="bell"></i>
-                                </span>
-                            </a>
-
-                            <a href="#" class="box-icons-url">
-                                <span class="span-users">
-                                    <i data-lucide="users"></i>
-                                </span>
-                            </a>
-
-                            <div class="box-profile">
-                                <i id="profile-icon" data-lucide="user"></i>
-                                <img id="profile-img" alt="Perfil" />
-                            </div>
-                        </div>
-                    </nav>            
-                </div>
-            </header>
+            <div id="menu-container"></div>
 
             <main>
-                <section class="carrusell">
-                    <h2>Notas que podrian interesarte</h2>
+                <section class="main-bx">
+                    <aside id="mn--aside" class="leteral--mn"></aside>
 
-                    <div class="slider-wrapper-2">
-                        <button class="arrow arrow left" aria-label="anterior"></button>
-                        <button class="arrow arrow right" aria-label="siguiente"></button>
-                        
-                        <div class="slide active">
-                            <img src="./IMAGENES/niño de lentes-imagen.avif" alt="#">
+                    <section class="main--container">
+                        <section class="carrusell">
                             
-                            <div class="text-carrusell">
-                                <h2>El secreto en el lugar secreto.</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente, inventore molestiae maiores possimus facilis beatae eos esse reprehenderit a facere earum sint consequuntur repudiandae id non culpa asperiores recusandae!</p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique magnam amet quo eligendi et quidem temporibus atque ab repellat molestias nulla soluta libero tempore modi sed, sit optio eaque! Delectus?</p>
-                            </div>
-                        </div>
-                        
-                        <div class="slide">
-                            <img src="./IMAGENES/niño de lentes-imagen.avif" alt="#">
-
-                            <div class="text-carrusell">
-                                <h2>El codigo davinci</h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora totam magni ducimus omnis mollitia possimus quos iste eius animi commodi vitae nisi impedit soluta, consequuntur fugit. Dolor inventore reiciendis optio.</p>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <img src="./IMAGENES/avatar-imagen.jpg" alt="#">
-                            <div class="text-carrusell">
-                                <h2>El poder de la neurociencia</h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora totam magni ducimus omnis mollitia possimus quos iste eius animi commodi vitae nisi impedit soluta, consequuntur fugit. Dolor inventore reiciendis optio.</p>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <img src="./IMAGENES/IA-imagen.avif" alt="#">
-                            <div class="text-carrusell">
-                                <h2>El codigo davinci</h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora totam magni ducimus omnis mollitia possimus quos iste eius animi commodi vitae nisi impedit soluta, consequuntur fugit. Dolor inventore reiciendis optio.</p>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <img src="./IMAGENES/imagen-educacion.jpg" alt="#">
-                            <div class="text-carrusell">
-                                <h2>El codigo davinci</h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora totam magni ducimus omnis mollitia possimus quos iste eius animi commodi vitae nisi impedit soluta, consequuntur fugit. Dolor inventore reiciendis optio.</p>
-                            </div>
-                        </div>  
-                    </div>
-
-                    <div class="dots"></div>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </section>
-
-                <section>
-                    <div class="box-seccion-1">
-                        <h2>Continua estudiando</h2>
-
-                        <div class="slider-wrapper">
-                            <button class="arrow left" id="prev"></button>
-                            <button class="arrow right" id="next"></button>
-                            
-                            <div class="box-items-principal">
-                                <div class="box-items">
-                                    <div class="item">
-                                        <video width="640" height="360" autoplay muted loop>
-                                            <source src="./IMAGENES/video-holograma2.mp4" type="video/mp4">
-                                            Tu navegador no soporta la etiqueta de video
-                                        </video>
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
+                            <div class="slider-wrapper-2">
+                                <button class="arrow arrow left" aria-label="anterior"></button>
+                                <button class="arrow arrow right" aria-label="siguiente"></button>
                                 
-                                <div class="box-items">
-                                    <div class="item">
-                                        <img src="./IMAGENES/avatares-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
-                                    
-                                <div class="box-items">
-                                    <div class="item">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
-                            
-                                <div class="box-items">
-                                    <div class="item">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
-                            
-                                <div class="box-items">
-                                    <div class="item">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
-
-                                <div class="box-items">
-                                    <div class="item">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
-
-                                <div class="box-items">
-                                    <div class="item">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
-
-                                <div class="box-items">
-                                    <div class="item">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
-
-                                <div class="box-items">
-                                    <div class="item">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El universo al alcance de todos</h3>
-                                    <p>El universo es el lugar mas misterioso que jamas haya existido, con millones de galaxias, estrellas y planetas.</p>
-                                    <div class="play"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>            
-                
-                <section>
-                    <div class="box-seccion-2">
-                        <h2>Lo que elegimos para ti</h2>
-
-                        <div class="slider-wrapper-3">
-                            <button class="arrow left prev-2"></button>
-                            <button class="arrow right next-2"></button>
-                            
-                            <div class="box-items-principal-2">
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/atrevete, no pasa nada.jpg" alt="item">
-                                    </div>
-                                    <h3>Atrevete, no pasa nada</h3>
-                                    <p>Autor: Alex Dey</p>
-                                    <p>Genero: Desarrollo Personal</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
+                                <div class="slide active">
+                                    <div class="slider-bx">
+                                        <img src="/IMAGENES/IMAGENES.WEBP/imagen-hipocampo.webp">
                                     </div>
                                     
-                                    <a href="#" class="link-overlay"></a>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/secretos en el lugar secreto-portada.webp" alt="item">
-                                    </div>
-                                    <h3>Secretos del lugar secreto</h3>
-                                    <p>Autor: Bob Sorge</p>
-                                    <p>genero: Religioso</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
+                                    <div class="text-carrusell">  
+                                        <h1 class="logo-text-principal">
+                                            NEURO<span>X</span>
+                                        </h1>     
+
+                                        <h2>el hipócampo</h2>
+
+                                        <div class="bx-stats">
+                                            <div class="stats">
+                                                <i data-lucide="clock"></i>
+                                                <p>8 min</p>
+                                            </div>
+                                            <p>•</p>
+
+                                            <div class="stats">
+                                                <i data-lucide="target"></i>
+                                                <p>Facil</p>
+                                            </div>
+                                            <p>•</p>
+
+                                            <div class="stats">
+                                                <i data-lucide="eye"></i>
+                                                <p>8.3k vistas</p>
+                                            </div>
+
+                                            <div class="bx-stats-2">
+                                                <div class="stats-2">
+                                                    <i data-lucide="book"></i>
+                                                </div>
+    
+                                                <div class="stats-2">
+                                                    <i data-lucide="film"></i>
+                                                </div>
+    
+                                                <div class="stats-2">
+                                                    <i data-lucide="brain"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p class="slider-text">El hipocampo es clave para transformar experiencias en recuerdos duraderos, permitiéndote aprender, adaptarte y construir quién eres a través de la memoria.</p>
+
+                                        <div class="bx--sesion">
+                                            <button class="btn--sesion">
+                                                <i data-lucide="play"></i>
+                                                iniciar sesión
+                                            </button>   
+                                            <button class="btn--sesion2">
+                                                <i data-lucide="info"></i>
+                                                mas información
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
+     
+                            <div class="slide">
+                                <img src="/IMAGENES/imagen-neurona.jpg">
                                 
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
+                                <div class="text-carrusell">
+
+                                    <h1 class="logo-text-principal">
+                                        NEURO<span>X</span>
+                                    </h1> 
+                                    <h2>La neurona</h2>
+
+                                    <div class="bx-stats">
+                                        <div class="stats">
+                                            <i data-lucide="clock"></i>
+                                            <p>8 min</p>
+                                        </div>
+                                        <p>•</p>
+    
+                                        <div class="stats">
+                                            <i data-lucide="target"></i>
+                                            <p>Facil</p>
+                                        </div>
+                                        <p>•</p>
+    
+                                        <div class="stats">
+                                            <i data-lucide="eye"></i>
+                                            <p>8.3k vistas</p>
+                                        </div>
+    
+                                        <div class="bx-stats-2">
+                                            <div class="stats-2">
+                                                <i data-lucide="book"></i>
+                                            </div>
+    
+                                            <div class="stats-2">
+                                                <i data-lucide="film"></i>
+                                            </div>
+    
+                                            <div class="stats-2">
+                                                <i data-lucide="brain"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
+                                    <p class="slider-text">Las neuronas son las unidades que transmiten información en tu cerebro, conectando pensamientos, emociones y acciones en una red que define cómo percibes el mundo.</p>
+
+                                    <div class="bx--sesion">
+                                        <button class="btn--sesion">
+                                            <i data-lucide="play"></i>
+                                            iniciar sesión
+                                        </button>   
+                                        <button class="btn--sesion2">
+                                            <i data-lucide="info"></i>
+                                            mas informacion
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
+        
+                            <div class="slide">
+                                
+                                <img src="/IMAGENES/IMAGENES.WEBP/imagen-corazón.webp">
 
-                <section>
-                    <div class="box-seccion-2">
-                        <h2>Terror</h2>
+                                <div class="text-carrusell">
 
-                        <div class="slider-wrapper-3">
-                            <button class="arrow left prev-2"></button>
-                            <button class="arrow right next-2"></button>
+                                    <h1 class="logo-text-principal">
+                                        NEURO<span>X</span>
+                                    </h1> 
+                                    <h2>el corazón</h2>
+
+                                    <div class="bx-stats">
+                                        <div class="stats">
+                                            <i data-lucide="clock"></i>
+                                            <p>8 min</p>
+                                        </div>
+                                        <p>•</p>
+    
+                                        <div class="stats">
+                                            <i data-lucide="target"></i>
+                                            <p>Facil</p>
+                                        </div>
+                                        <p>•</p>
+    
+                                        <div class="stats">
+                                            <i data-lucide="eye"></i>
+                                            <p>8.3k vistas</p>
+                                        </div>
+    
+                                        <div class="bx-stats-2">
+                                            <div class="stats-2">
+                                                <i data-lucide="book"></i>
+                                            </div>
+    
+                                            <div class="stats-2">
+                                                <i data-lucide="film"></i>
+                                            </div>
+    
+                                            <div class="stats-2">
+                                                <i data-lucide="brain"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="slider-text">El corazón no solo bombea sangre: es el motor que mantiene cada célula viva, sincronizando tu cuerpo y sosteniendo el ritmo de tu vida.</p>
+
+                                    <div class="bx--sesion">
+                                        <button class="btn--sesion">
+                                            <i data-lucide="play"></i>
+                                            iniciar sesión
+                                        </button>   
+                                        <button class="btn--sesion2">
+                                            <i data-lucide="info"></i>
+                                            mas informacion
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                             
-                            <div class="box-items-principal-2">
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/aula virtual-imagen.jpeg" alt="item">
+                            <div class="slide">
+                                <video autoplay muted loop playsinline class="slider-mp4">
+                                    <source src="../VIDEOS/video-tierra.mp4" type="video/mp4">
+                                    Tu navegador no soporta videos HTML5.
+                                </video>
+
+                                <div class="text-carrusell">
+
+                                    <h1 class="logo-text-principal">
+                                        NEURO<span>X</span>
+                                    </h1> 
+                                    <h2>Planeta tierra</h2>
+
+                                    <div class="bx-stats">
+                                        <div class="stats">
+                                            <i data-lucide="clock"></i>
+                                            <p>8 min</p>
+                                        </div>
+                                        <p>•</p>
+    
+                                        <div class="stats">
+                                            <i data-lucide="target"></i>
+                                            <p>Facil</p>
+                                        </div>
+                                        <p>•</p>
+    
+                                        <div class="stats">
+                                            <i data-lucide="eye"></i>
+                                            <p>8.3k vistas</p>
+                                        </div>
+    
+                                        <div class="bx-stats-2">
+                                            <div class="stats-2">
+                                                <i data-lucide="book"></i>
+                                            </div>
+    
+                                            <div class="stats-2">
+                                                <i data-lucide="film"></i>
+                                            </div>
+    
+                                            <div class="stats-2">
+                                                <i data-lucide="brain"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
+                                    <p class="slider-text">La Tierra es un sistema vivo y dinámico donde todo está conectado, desde el clima hasta los ecosistemas que hacen posible la vida.</p>
+
+                                    <div class="bx--sesion">
+                                        <button class="btn--sesion">
+                                            <i data-lucide="play"></i>
+                                            iniciar sesión
+                                        </button>   
+                                        <button class="btn--sesion2">
+                                            <i data-lucide="info"></i>
+                                            mas informacion
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
+        
+                            <div class="slide">
+                                <img src="../IMAGENES/imagen-ojo-humano.jpg">
+                                
 
-                <section>
-                    <div class="box-seccion-2">
-                        <h2>El cerebro al descubierto</h2>
+                                <div class="text-carrusell">
 
-                        <div class="slider-wrapper-3">
-                            <button class="arrow left prev-2"></button>
-                            <button class="arrow right next-2"></button>
+                                    <h1 class="logo-text-principal">
+                                        NEURO<span>X</span>
+                                    </h1> 
+                                    <h2>el ojo humano</h2>
+
+                                    <div class="bx-stats">
+                                        <div class="stats">
+                                            <i data-lucide="clock"></i>
+                                            <p>8 min</p>
+                                        </div>
+                                        <p>•</p>
+    
+                                        <div class="stats">
+                                            <i data-lucide="target"></i>
+                                            <p>Facil</p>
+                                        </div>
+                                        <p>•</p>
+    
+                                        <div class="stats">
+                                            <i data-lucide="eye"></i>
+                                            <p>8.3k vistas</p>
+                                        </div>
+    
+                                        <div class="bx-stats-2">
+                                            <div class="stats-2">
+                                                <i data-lucide="book"></i>
+                                            </div>
+    
+                                            <div class="stats-2">
+                                                <i data-lucide="film"></i>
+                                            </div>
+    
+                                            <div class="stats-2">
+                                                <i data-lucide="brain"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="slider-text">El ojo humano capta la luz y la convierte en imágenes, permitiéndote interpretar el entorno y comprender la realidad que te rodea.</p>
+
+                                    <div class="bx--sesion">
+                                        <button class="btn--sesion">
+                                            <i data-lucide="play"></i>
+                                            iniciar sesión
+                                        </button>   
+                                        <button class="btn--sesion2">
+                                            <i data-lucide="info"></i>
+                                            mas informacion
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div> 
+                        
+                        <div class="dots"></div>
+                        </section>
+                        
+                        <section>
+                            <div class="box-seccion-1">
+                                <h2>Continúa Tus Sesiónes</h2>
+                                
+                                <div class="slider-wrapper">
+                                    <button class="arrow left" id="prev"></button>
+                                    <button class="arrow right" id="next"></button>
+                                    
+                                    <div class="box-items-principal">
+
+                                        <div class="box-items">
+                                            <div class="item">
+                                                <img src="/IMAGENES/imagen-marte.jpg">
+
+                                                <video width="640" height="360" muted loop preload="none">
+                                                    <source data-src="/VIDEOS/marte.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+
+                                            <h3>Marte: El planeta rojo</h3>
+                                            <p>42% Completado • 5 min restantes</p>
+                                        </div>
+                                        
+                                        <div class="box-items">
+                                            <div class="item">
+                                                <img src="/IMAGENES/imagen-adn.jpg">
+
+                                                <video width="640" height="360" muted loop preload="none">
+                                                    <source data-src="/VIDEOS/adn.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+
+                                            <h3>El Adn</h3>
+                                            <p>80% Completado • 2 min restantes</p>
+                                        </div>
+                                        
+                                        <div class="box-items">
+                                            <div class="item">
+                                                <img src="./IMAGENES/IA-imagen.avif" alt="item">
+                                            </div>
+                                            <h3>El universo al alcance de todos</h3>
+                                            <p>42% Completado • 5 min restantes</p>
+                                        </div>
+                                        
+                                        <div class="box-items">
+                                            <div class="item">
+                                                <img src="./IMAGENES/IA-imagen.avif" alt="item">
+                                            </div>
+                                            <h3>El universo al alcance de todos</h3>
+                                        </div>
+                                        
+                                        <div class="box-items">
+                                            <div class="item">
+                                                <img src="./IMAGENES/IA-imagen.avif" alt="item">
+                                            </div>
+                                          <h3>El universo al alcance de todos</h3>
+                                        </div>
+                                        
+                                        <div class="box-items">
+                                            <div class="item">
+                                                <img src="./IMAGENES/IA-imagen.avif" alt="item">
+                                            </div>
+                                            <h3>El universo al alcance de todos</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>            
+                        
+                        <section class="box-seccion-2">
+                            <div class="bx-sec2">
+                                <h2>Lo que elegimos para ti</h2>
+
+                                <div class="bx-verTodo2">
+                                    <span class="text-verTodo2">Explorar todo
+                                        <i data-lucide="chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
                             
-                            <div class="box-items-principal-2">
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/aula virtual-imagen.jpeg" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="play"></i>
-                                    </div>
-                                </div>
+                            <div class="slider-wrapper-3">
+                                <button class="arrow left prev-2"></button>
+                                <button class="arrow right next-2"></button>
                                 
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
+                                <div id="carrusel-sugerencias" class="box-items-principal-2"></div>
+                            </div>
+                        </section>
+
+                        <section class="bx-sesiones">
+                            <div class="bx-sesiones2">
+                                <h1 class="h1-sesiones">sesiónes recomendadas</h1>
                                 
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
+                                <div id="cards-home" class="cards">       
+                            </div>
+                        </section>
+                        
+                        <section class="box-seccion-2">
+                            <div class="bx-sec2">
+                                <h2>Para pasar noche de terror</h2>
+
+                                <div class="bx-verTodo2">
+                                    <span class="text-verTodo2">Explorar todo
+                                        <i data-lucide="chevron-right"></i>
+                                    </span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
+                                
+                                <div class="slider-wrapper-3">
+                                    <button class="arrow left prev-2"></button>
+                                    <button class="arrow right next-2"></button>
+                                    
+                                    <div id="carrusel-terror" class="box-items-principal-2"></div>
+                                </div>
+                        </section>
+                        
+                        <section class="box-seccion-2">
+                            <div class="bx-sec2">
+                                <h2>El cerebro al descubierto</h2>
 
-                <section>
-                    <div class="box-seccion-2">
-                        <h2>Desarrollo personal</h2>
-
-                        <div class="slider-wrapper-3">
-                            <button class="arrow left prev-2"></button>
-                            <button class="arrow right next-2"></button>
+                                <div class="bx-verTodo2">
+                                    <span class="text-verTodo2">Explorar todo
+                                        <i data-lucide="chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
                             
-                            <div class="box-items-principal-2">
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/aula virtual-imagen.jpeg" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
+                            <div class="slider-wrapper-3">
+                                <button class="arrow left prev-2"></button>
+                                <button class="arrow right next-2"></button>
                                 
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
+                                <div id="carrusel-cerebro" class="box-items-principal-2">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
+                        </section>
+                        
+                        <section class="box-seccion-2">
+                            <div class="bx-sec2">
+                                <h2>Desarrollo personal</h2>
 
-                <section>
-                    <div class="box-seccion-2">
-                        <h2>Biologia</h2>
-
-                        <div class="slider-wrapper-3">
-                            <button class="arrow left prev-2"></button>
-                            <button class="arrow right next-2"></button>
+                                <div class="bx-verTodo2">
+                                    <span class="text-verTodo2">Explorar todo
+                                        <i data-lucide="chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
                             
-                            <div class="box-items-principal-2">
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/aula virtual-imagen.jpeg" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
+                            <div class="slider-wrapper-3">
+                                <button class="arrow left prev-2"></button>
+                                <button class="arrow right next-2"></button>
                                 
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
+                                <div id="carrusel-desarrollo" class="box-items-principal-2">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
+                        </section>
+                        
+                        <section class="box-seccion-2">
+                            <div class="bx-sec2">
+                                <h2>Biologia</h2>
 
-                <section>
-                    <div class="box-seccion-2">
-                        <h2>Astronomia</h2>
-
-                        <div class="slider-wrapper-3">
-                            <button class="arrow left prev-2"></button>
-                            <button class="arrow right next-2"></button>
+                                <div class="bx-verTodo2">
+                                    <span class="text-verTodo2">Explorar todo
+                                        <i data-lucide="chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
                             
-                            <div class="box-items-principal-2">
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/aula virtual-imagen.jpeg" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
+                            <div class="slider-wrapper-3">
+                                <button class="arrow left prev-2"></button>
+                                <button class="arrow right next-2"></button>
                                 
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-items-2">
-                                    <div class="item-2">
-                                        <img src="./IMAGENES/IA-imagen.avif" alt="item">
-                                    </div>
-                                    <h3>El poder de la mente</h3>
-                                    <p>la mente es extraudinaria cuando se trata de dominarla</p>
-                                    <div class="play-2">
-                                        <i data-lucide="move-right"></i>
-                                    </div>
+                                <div id="carrusel-biologia" class="box-items-principal-2">
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+                        
+                        <section class="box-seccion-2">
+                            <div class="bx-sec2">
+                                <h2>El universo al alcancé</h2>
+
+                                <div class="bx-verTodo2">
+                                    <span class="text-verTodo2">Explorar todo
+                                        <i data-lucide="chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="slider-wrapper-3">
+                                <button class="arrow left prev-2"></button>
+                                <button class="arrow right next-2"></button>
+                                
+                                <div id="carrusel-astronomia" class="box-items-principal-2">
+                                </div>
+                            </div>
+                        </section>
+                    </section>
                 </section>
             </main>
         </body>
     </html>
-                        
+                    
+        

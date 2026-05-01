@@ -14,6 +14,16 @@ document.getElementById("goLogin").onclick = () => {
     authCard.classList.remove("register-active");
 };
 
+// -------- SE CREA UNA URL PARA REGISTRO ----------
+
+window.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get("action") === "register-form") {
+            authCard.classList.add("register-active");
+        }
+    })
+
 // --------- MOSTRAR CONTRASEÑA CON UN CLICK ----------
 
 document.querySelectorAll(".toggle-password").forEach(icon => {

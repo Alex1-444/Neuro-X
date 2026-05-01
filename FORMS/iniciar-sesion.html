@@ -12,6 +12,8 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+            <script src="https://unpkg.com/lucide@latest"></script>
+
             <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
@@ -22,71 +24,27 @@
         <body>
             <header>
                 <div class="logo">
-                    <svg class="logo-brain" viewBox="0 0 120 120" fill="none">
-                        <defs>
-                            <linearGradient id="brainGradient" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#38bdf8"/>
-                                <stop offset="100%" stop-color="#a855f7"/>
-                            </linearGradient>
-                            
-                            <filter id="glow">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
-                                <feMerge>
-                                    <feMergeNode in="blur"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                            
-                        </defs>
-
-                        <!-- hemisferio izquierdo -->
-                        <path
-                        d="M35 30
-                        C20 25 15 45 25 50
-                        C15 60 25 80 45 75
-                        C40 85 55 90 60 80
-                        V30
-                        C55 20 40 20 35 30Z"
-                        stroke="url(#brainGradient)"
-                        stroke-width="3"
-                        fill="none"
-                        filter="url(#glow)"
-                        />
-                        
-                        <!-- hemisferio derecho -->
-                        <path
-                        d="M85 30
-                        C100 25 105 45 95 50
-                        C105 60 95 80 75 75
-                        C80 85 65 90 60 80
-                        V30
-                        C65 20 80 20 85 30Z"
-                        stroke="url(#brainGradient)"
-                        stroke-width="3"
-                        fill="none"
-                        filter="url(#glow)"
-                        />
-                        
-                        <!-- surcos internos -->
-                        <path d="M40 40 C30 45 35 60 45 65" stroke="url(#brainGradient)" opacity="0.5"/>
-                        <path d="M40 55 C30 60 40 75 50 70" stroke="url(#brainGradient)" opacity="0.5"/>
-                        
-                        <path d="M80 40 C90 45 85 60 75 65" stroke="url(#brainGradient)" opacity="0.5"/>
-                        <path d="M80 55 C90 60 80 75 70 70" stroke="url(#brainGradient)" opacity="0.5"/>
-                        
-                        <!-- línea central -->
-                        <line x1="60" y1="28" x2="60" y2="85" stroke="url(#brainGradient)" opacity="0.3"/>
-                    </svg>
+                    <div class="back-arrow">
+                        <a href="../FRONT-PAGE/NeuroX.portada.html">
+                            <i data-lucide="chevron-left"></i>                            
+                        </a>
+                    </div>
                     
-                    <h1 class="logo-text">
-                        Neuro<span>X</span>
-                    </h1>
+                    <div class="bx-brain">
+                        <i data-lucide="brain"></i>
+                        <h1 class="logo-neurox">
+                            Neuro<span>X</span>
+                        </h1>
+                    </div>
                 </div>
             </header>
             
             <main>
                 <div class="auth-card" id="authCard">
                     <form class="form login-form">
+                        <div class="bx-icon-users">
+                            <i data-lucide="user"></i>
+                        </div>
                         <h2 class="text-form">Inicia Sesión</h2>
                         <p class="text-form-2">Lee, Visualiza, Aprende</p>
 
@@ -132,8 +90,8 @@
                     </form>
 
                     <form class="form register-form">
-                        <h2 class="text-form">Crea tu cuenta NeuroX</h2>
-                        <p class="text-form-2">Unete a NeuroX para descubrir conocimientos avanzados de IA</p>
+                        <h2 class="text-form">Crea tu cuenta</h2>
+                        <p class="text-form-2">Déscubre un mundo en 3D</p>
 
                         <div class="input">
                             <span class="icon-user">

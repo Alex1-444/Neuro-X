@@ -1,0 +1,60 @@
+.like-animation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+
+    width: 122px;
+    height: 122px;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+    z-index: 10;
+
+    filter: drop-shadow(0 0 15px rgba(255, 56, 56, 0.5));
+}
+
+.large-like-icon {
+    width: 120px;
+    height: 120px;
+    stroke: #ff3838;
+    fill: #ff3838;
+    display: block !important;
+
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+.like-animation-container.animate-like {
+    display: flex;
+    animation: neuroxLike 1.2s ease-in-out forwards;
+}
+
+@keyframes neuroxLike {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    /* Aparición rápida y crecimiento */
+    15% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0.9;
+    }
+    /* Pequeño retroceso (pulso) */
+    30% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    /* Se mantiene visible un momento */
+    80% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    /* Desaparición suave */
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
