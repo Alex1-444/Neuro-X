@@ -1,0 +1,287 @@
+.modalContainer {
+  position: fixed;
+  z-index: 9999; /* Asegura que flote sobre TODO */
+  width: 300px;
+  background-color: #1b1d1d; /* Estilo Spotify oscuro */
+  border-radius: 30px;
+  padding: 16px;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.5), 0 6px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  /* Animación de entrada */
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.closeBtn:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  color: #a0a0a0;
+}
+
+.searchInput {
+  width: 100%;
+  background-color: #3e3e3e;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 10px 10px 32px;
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.searchInput:focus {
+  background-color: #4a4a4a;
+}
+
+.createBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 13px 4px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.createBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.collectionList {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  min-height: 260px;
+  max-height: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 97%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 97%, transparent 100%);
+
+  /* Soporte para Firefox: barra delgada y color rojo transparente */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 0, 0, 0.4) transparent;
+}
+
+/* Scrollbar personalizado para Chrome/Edge/Safari */
+.collectionList::-webkit-scrollbar {
+  width: 2px !important; /* Forzamos el grosor */
+  background-color: transparent; /* Fondo de la barra transparente */
+}
+
+.collectionList::-webkit-scrollbar-track {
+  background-color: transparent; /* Aseguramos que no haya un fondo gris detrás */
+}
+
+.collectionList::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 0, 0, 0.4) !important; /* Rojo transparente */
+  border-radius: 4px;
+}
+
+.collectionList::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 0, 0, 0.7) !important;
+}
+
+.favoritesIconWrapper {
+  width: 40px; /* Pon el mismo tamaño que tiene tu .collectionIconImg */
+  height: 40px;
+  border-radius: 6px; /* Pon el mismo border-radius que tu .collectionIconImg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff4040 0%, #ffffff 100%);
+  flex-shrink: 0;
+}
+
+.collectionItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.collectionItem:hover {
+    color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25),
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.backBtn {
+    background: none;
+    border: none;
+    color: #a0a0a0;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    transition: color 0.2s, transform 0.2s;
+}
+
+.backBtn:hover {
+    color: #fff;
+    transform: translateX(-2px);
+}
+
+.createInput {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 9999px;
+    border: none;
+    background-color: #3e3e3e;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+}
+
+.createInput:focus {
+    background-color: #4a4a4a;
+    outline: none;
+}
+
+.collectionIconImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.collectionText {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.collectionSpan {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+}
+
+/* Botón Hecho al final del modal */
+.doneBtn {
+    position: relative;
+    overflow: hidden;
+
+  margin-top: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  background: linear-gradient(135deg, #cf3585, #9d174d);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doneBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+    filter: blur(6px);
+
+    transition: left 0.6s ease;
+}
+
+.doneBtn:hover::before {
+    left: 100%;
+}
+
+.doneBtn:hover {
+    transform: scale(1.04);
+}
+
+.doneBtn:active {
+  transform: scale(0.97);
+}

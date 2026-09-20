@@ -1,0 +1,60 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: black;
+    transition: opacity .5s ease, transform .35s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    /* Soporte para Firefox: scroll delgado y oculto por defecto */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* Mostrar el scroll en Firefox al pasar el cursor sobre el body */
+body:hover {
+    scrollbar-color: #ff4d79 transparent;
+}
+
+/* --- Soporte para navegadores basados en WebKit (Chrome, Edge, Safari) --- */
+
+::-webkit-scrollbar {
+    width: 6px; /* Scroll delgado */
+    background-color: transparent; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Pulgar del scroll transparente por defecto */
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/* Aparece de color rojo rosadito al pasar el cursor sobre la página */
+body:hover::-webkit-scrollbar-thumb {
+    background-color: #ff4d79; 
+}
+
+/* Color un poco más intenso al poner el cursor directamente sobre el scroll */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e63e65; 
+}

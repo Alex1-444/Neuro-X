@@ -1,0 +1,260 @@
+.aside {
+  grid-area: aside;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg, 
+    #121212 0%, 
+    #181214 50%, 
+    #3b141e 100%
+  );
+
+  border-radius: 10px;
+  margin-top: 3px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-y: auto;
+  position: relative;
+  z-index: 1000;
+}
+
+.topNav {
+  width: 100%;
+  padding: 1.3rem 0.5rem;
+  border-radius: 0 0 10px 10px;
+
+  background: #121212;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* 👈 sin esto, los <li> se encogen a su contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* 👈 antes era "start", encogía los <li> horizontalmente */
+  gap: 0.2rem;
+}
+
+.navList li {
+  width: 100%; /* 👈 asegura que cada <li> ocupe todo el ancho disponible */
+}
+
+/* ── Contenedor de cada ícono superior + su label ── */
+.navItemContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.navItemContainer:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25),
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLabel {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #a0a0a0;
+  text-align: center;
+  line-height: 1.1;
+  white-space: normal;
+  word-break: break-word;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+/* ── Estado hover y activo: ícono + label en blanco ── */
+.navItemContainer:hover .navItem,
+.navItemContainerActive .navItem {
+  color: #ffffff;
+}
+
+.navItemContainer:hover .navLabel,
+.navItemContainerActive .navLabel {
+  color: #ffffff;
+}
+
+/* ── Contenedor general de colecciones (título fijo + lista con scroll) ── */
+.playlistsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  margin-top: 0.4rem;
+  border-radius: 10px;
+
+  flex: 1;
+  min-height: 0; /* 👈 clave para que el hijo con scroll funcione dentro de un flex */
+
+  padding: 0 0.5rem;
+
+  background: #12121275;
+}
+
+/* ── Título de sección "Mis Colecciones" (estático, no scrollea) ── */
+.sectionTitle {
+  width: 100%;
+  flex-shrink: 0; /* 👈 evita que se comprima cuando el contenido interno crece */
+  padding: 0 0 1.3rem 0.6rem;
+  margin: 0;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Lista de colecciones: única zona con scroll ── */
+.playlistsScroll {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.4rem;
+  width: 100%;
+
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+
+  /* Efecto de desvanecimiento corto usando píxeles fijos (ej. 20px) */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0px,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0px,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+}
+
+.playlistsScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* -- Contenedor de los elementos de playlist -- */
+.bookListContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+
+  padding: 7px;
+  border-radius: 8px;
+  text-decoration: none;
+
+  transition: background 0.25s ease;
+}
+
+.bookListContainer:hover {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25),
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.favoritesIconWrapper {
+  width: 47px; /* Pon el mismo tamaño que tiene tu .booklistImg */
+  height: 47px;
+  border-radius: 5px; /* Pon el mismo border-radius que tu .booklistImg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Degradado de rojo a blanco */
+  background: linear-gradient(135deg, #ff4040 0%, #ffffff 100%);
+  flex-shrink: 0;
+}
+
+
+/* ── Elementos de Imagen ── */
+.booklistItem {
+  width: 47px;
+  height: 47px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: block;
+  flex-shrink: 0;
+}
+
+.booklistImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.booklistText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  text-transform: capitalize;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ── Nombre de la categoría, al lado de la imagen ── */
+.itemLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c4c4c4;
+  text-align: left;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+
+  width: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  transition: color 0.2s ease;
+}
+
+.bookListContainer:hover .itemLabel {
+  color: #ffffff;
+}
+
+.itemDescription {
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: #a0a0a0;
+  text-align: left;
+  line-height: 1.20;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

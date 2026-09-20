@@ -1,0 +1,179 @@
+/* ── Sección ── */
+.carouselSection {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 0; /* quitamos el padding lateral de aquí, lo maneja .track */
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+
+  margin-top: -5.5rem;
+  margin-bottom: 4rem;
+}
+
+.carouselTitle {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #e2e8f0;
+  margin: 0;
+  padding-left: 4rem; /* 3.5rem del padding del track + 0.5rem del padding lateral de .slide */
+  line-height: 1;
+}
+
+/* ── Wrapper ── */
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  padding: 0;
+
+}
+
+.track {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 3.5rem; /* aire real para que la máscara no corte contenido */
+
+  mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+}
+
+.trackInner {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.slide {
+  box-sizing: border-box;
+  padding: 0 0.3rem;
+  flex-shrink: 0;
+}
+
+/* ── Card ── */
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1e293b;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: scale(1.04) translateY(-2px);
+  z-index: 5;
+}
+
+/* Thumbnail */
+.thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnailHidden { opacity: 0; }
+
+/* Video */
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.videoVisible { opacity: 1; }
+
+/* Progreso */
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  width: 90%;
+  margin: 0 auto 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #c20258;
+  transition: width 0.3s ease;
+}
+
+/* Info overlay */
+.infoOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.infoOverlayVisible { opacity: 1; }
+
+.cardTitle {
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.cardDuration {
+  color: #94a3b8;
+  font-size: 0.77rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(47, 47, 47, 0.9);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.3s ease;
+}
+
+.carouselWrapper:hover .arrow {
+  opacity: 1;
+}
+
+.arrow:hover { background: #464646; }
+
+.arrowLeft  { left: 1.70rem; }
+.arrowLeft:hover { transform: translateY(-50%) translateX(-3px); }
+
+.arrowRight { right: 1.70rem; }
+.arrowRight:hover { transform: translateY(-50%) translateX(3px); }

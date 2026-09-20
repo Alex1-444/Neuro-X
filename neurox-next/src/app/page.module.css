@@ -1,0 +1,11 @@
+.pageContent {
+  flex: 1;
+  min-width: 0; /* evita overflow con flex */
+  overflow-y: auto;
+}
+
+.carouselsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

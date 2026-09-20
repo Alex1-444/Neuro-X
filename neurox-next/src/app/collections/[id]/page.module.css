@@ -1,0 +1,154 @@
+.page {
+  max-width: 1400px;
+  margin: 0 auto;
+
+}
+
+.header {
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 2.3rem 3.5rem;
+
+}
+
+.headerImage {
+  width: 250px; /* Tamaño de la imagen, puedes ajustarlo */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra elegante */
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem; /* Espacio entre el h1 y el p */
+}
+
+.headerText h1 {
+  font-size: 4.8rem;
+  color: #f1f1f1;
+  margin: 0;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.headerText p {
+  color: #a0a0a0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+
+.card {
+  position: relative; /* Necesario para posicionar los elementos internos */
+  display: block;
+  border-radius: 30px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #f1f1f1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  aspect-ratio: 2 / 2; 
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cardImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Al fondo */
+}
+
+/* Overlay oscuro para que el texto resalte */
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Degradado: muy oscuro abajo, transparente arriba */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 2; /* Encima de la imagen, debajo del texto */
+  pointer-events: none; /* Evita que bloquee los clics */
+}
+
+.cardBody {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 3; /* Hasta arriba */
+  box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+}
+
+.cardBody h2 {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  margin: 0 0 0.3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra extra para legibilidad */
+}
+
+.cardBody p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  /* Opcional: truncar texto si es muy largo */
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty {
+  text-align: center;
+  gap: 12px;
+  padding: 4rem 0;
+  color: #a0a0a0;
+}
+
+.exploreLink {
+    display: inline-block;
+  color: #1e1e1e;
+  font-weight: 600;
+  padding: 0.8rem 3rem;
+  border-radius: 9999px;
+  text-decoration: none;
+
+  margin-top: 10px;
+
+  background-color: #f1f1f1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.exploreLink:hover {
+    transform: translateY(-3px);
+    color: #000;
+}
+
+.notFound {
+  text-align: center;
+  padding: 4rem;
+  color: #f1f1f1;
+
+}
